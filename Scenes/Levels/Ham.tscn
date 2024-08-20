@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=3 uid="uid://cfp6rj8jtev4y"]
+
+[ext_resource type="Script" path="res://Scenes/WorldScripts/HamWorld.gd" id="1_a1k53"]
+[ext_resource type="PackedScene" uid="uid://cb10rklint0t2" path="res://Scenes/Background.tscn" id="2_u3j7d"]
+[ext_resource type="PackedScene" uid="uid://dgu4qqhcpgfqa" path="res://Scenes/Player.tscn" id="3_nr5vf"]
+[ext_resource type="PackedScene" uid="uid://cgjvm8qlp8al7" path="res://Score.tscn" id="4_ps2ip"]
+[ext_resource type="PackedScene" uid="uid://reykovef8and" path="res://Scenes/heart.tscn" id="5_hi4m6"]
+[ext_resource type="PackedScene" uid="uid://pilievlkvvc8" path="res://Scenes/ScoreBox.tscn" id="6_jhg0v"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_n3qbx"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_a1k53")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(577, 323)
+
+[node name="Sprite2D" parent="." instance=ExtResource("2_u3j7d")]
+position = Vector2(576, 322)
+scale = Vector2(0.91411, 0.742221)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(593, 647)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_n3qbx")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(0, 291)
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource("WorldBoundaryShape2D_n3qbx")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(1152, 294)
+rotation = -1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+shape = SubResource("WorldBoundaryShape2D_n3qbx")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(570, 48)
+rotation = -3.14159
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+shape = SubResource("WorldBoundaryShape2D_n3qbx")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_nr5vf")]
+position = Vector2(593, 581)
+scale = Vector2(0.247018, 0.247018)
+
+[node name="Control" parent="." instance=ExtResource("4_ps2ip")]
+offset_left = 134.0
+offset_top = 10.0
+offset_right = 134.0
+offset_bottom = 10.0
+
+[node name="Control2" parent="." instance=ExtResource("5_hi4m6")]
+offset_left = 919.0
+offset_top = -4.0
+offset_right = 959.0
+offset_bottom = 36.0
+scale = Vector2(0.53996, 0.53996)
+
+[node name="Sprite2D2" parent="." instance=ExtResource("6_jhg0v")]
+position = Vector2(188, 41)
+scale = Vector2(0.435742, 0.435742)

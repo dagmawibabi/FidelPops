@@ -1,0 +1,66 @@
+[gd_scene load_steps=10 format=3 uid="uid://cfpyerh247p4n"]
+
+[ext_resource type="Script" path="res://Scenes/Bubbles/HamB.gd" id="1_wp7de"]
+[ext_resource type="Texture2D" uid="uid://ipnvrwe3icyp" path="res://Assets/Explosion/Green Effect Bullet Impact Explosion 32x32.png" id="2_ido42"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sl58q"]
+size = Vector2(243, 262)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kk7jj"]
+atlas = ExtResource("2_ido42")
+region = Rect2(508, 386, 33, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m5put"]
+atlas = ExtResource("2_ido42")
+region = Rect2(541, 355, 33, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7d8j"]
+atlas = ExtResource("2_ido42")
+region = Rect2(541, 386, 33, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cdy3q"]
+atlas = ExtResource("2_ido42")
+region = Rect2(574, 386, 33, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dq3uo"]
+atlas = ExtResource("2_ido42")
+region = Rect2(607, 355, 33, 31)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dsksd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kk7jj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m5put")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7d8j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cdy3q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dq3uo")
+}],
+"loop": false,
+"name": &"default",
+"speed": 16.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_wp7de")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_sl58q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["bubbles"]]
+position = Vector2(-1, 7.62939e-06)
+scale = Vector2(7.39394, 8.51613)
+sprite_frames = SubResource("SpriteFrames_dsksd")
+frame = 3
+frame_progress = 0.200925

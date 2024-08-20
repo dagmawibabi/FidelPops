@@ -1,0 +1,70 @@
+[gd_scene load_steps=9 format=3 uid="uid://lbsuujoxwxcn"]
+
+[ext_resource type="Script" path="res://Scenes/WorldScripts/JeWorld.gd" id="1_fjy5u"]
+[ext_resource type="PackedScene" uid="uid://cb10rklint0t2" path="res://Scenes/Background.tscn" id="2_v1a5w"]
+[ext_resource type="Texture2D" uid="uid://s3jtmp3sruxq" path="res://Assets/Background/HAWASSA BACKGROUND.png" id="3_y84p2"]
+[ext_resource type="PackedScene" uid="uid://dgu4qqhcpgfqa" path="res://Scenes/Player.tscn" id="4_fmp8n"]
+[ext_resource type="PackedScene" uid="uid://cgjvm8qlp8al7" path="res://Score.tscn" id="5_l3l8n"]
+[ext_resource type="PackedScene" uid="uid://reykovef8and" path="res://Scenes/heart.tscn" id="6_d6kmi"]
+[ext_resource type="PackedScene" uid="uid://pilievlkvvc8" path="res://Scenes/ScoreBox.tscn" id="7_t1oax"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_n3qbx"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_fjy5u")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(577, 323)
+
+[node name="Sprite2D" parent="." instance=ExtResource("2_v1a5w")]
+position = Vector2(576, 322)
+scale = Vector2(0.266873, 0.21669)
+texture = ExtResource("3_y84p2")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(593, 647)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_n3qbx")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(0, 291)
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource("WorldBoundaryShape2D_n3qbx")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(1152, 294)
+rotation = -1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+shape = SubResource("WorldBoundaryShape2D_n3qbx")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(566, 39)
+rotation = -3.14159
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+shape = SubResource("WorldBoundaryShape2D_n3qbx")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("4_fmp8n")]
+position = Vector2(593, 581)
+scale = Vector2(0.247018, 0.247018)
+
+[node name="Control" parent="." instance=ExtResource("5_l3l8n")]
+offset_left = 120.0
+offset_top = 5.0
+offset_right = 120.0
+offset_bottom = 5.0
+
+[node name="Control2" parent="." instance=ExtResource("6_d6kmi")]
+offset_left = 931.0
+offset_top = -6.0
+offset_right = 971.0
+offset_bottom = 34.0
+scale = Vector2(0.53996, 0.53996)
+
+[node name="Sprite2D2" parent="." instance=ExtResource("7_t1oax")]
+position = Vector2(174, 35)
+scale = Vector2(0.421405, 0.421405)

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bs6b80bmcnx06"]
+
+[ext_resource type="AudioStream" uid="uid://hg61ksw028ko" path="res://Assets/Music/MulatuAstatke.mp3" id="1_sntny"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_sntny")
+autoplay = true

@@ -1,0 +1,67 @@
+[gd_scene load_steps=4 format=3 uid="uid://duc6k5w5rc1tr"]
+
+[ext_resource type="Texture2D" uid="uid://bi6ehx1buh6n5" path="res://Assets/Background/FidelPops.png" id="1_hwpk0"]
+[ext_resource type="Script" path="res://Scripts/SceneSelector.gd" id="2_08134"]
+[ext_resource type="Script" path="res://Scripts/MusicControl.gd" id="3_orfnq"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(575, 323)
+scale = Vector2(0.259561, 0.213622)
+texture = ExtResource("1_hwpk0")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0, 0, 0, 0)
+layout_mode = 0
+offset_left = 339.0
+offset_top = 293.0
+offset_right = 347.0
+offset_bottom = 301.0
+scale = Vector2(61.5566, 9.19493)
+flat = true
+script = ExtResource("2_08134")
+scene = "res://Scenes/AreaSelector.tscn"
+
+[node name="Button2" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0, 0, 0, 0)
+layout_mode = 0
+offset_left = 649.0
+offset_top = 400.0
+offset_right = 657.0
+offset_bottom = 408.0
+scale = Vector2(7.90926, 6.47811)
+flat = true
+script = ExtResource("2_08134")
+scene = "res://Scenes/Credits.tscn"
+
+[node name="Button3" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0, 0, 0, 0)
+layout_mode = 0
+offset_left = 474.0
+offset_top = 398.0
+offset_right = 482.0
+offset_bottom = 406.0
+scale = Vector2(7.90926, 6.47811)
+flat = true
+script = ExtResource("3_orfnq")
+
+[node name="Button4" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0, 0, 0, 0)
+layout_mode = 0
+offset_left = 556.0
+offset_top = 387.0
+offset_right = 564.0
+offset_bottom = 395.0
+scale = Vector2(8.74202, 8.71958)
+flat = true
+script = ExtResource("2_08134")
+scene = "res://Scenes/About.tscn"

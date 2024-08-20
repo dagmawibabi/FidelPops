@@ -1,0 +1,92 @@
+[gd_scene load_steps=4 format=3 uid="uid://drhcby6h8vtoo"]
+
+[ext_resource type="Script" path="res://Scripts/SceneSelector.gd" id="1_2ym3t"]
+[ext_resource type="Texture2D" uid="uid://e3fe2h2w6j8w" path="res://Assets/Background/GONDAR.png" id="2_wg3tg"]
+[ext_resource type="PackedScene" uid="uid://6urm4t3er4ah" path="res://Scenes/Lock.tscn" id="3_72oml"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0, 0, 0, 0)
+layout_mode = 0
+offset_left = 40.0
+offset_top = 239.0
+offset_right = 48.0
+offset_bottom = 247.0
+scale = Vector2(9.11185, 7.3276)
+flat = true
+script = ExtResource("1_2ym3t")
+scene = "res://Scenes/Levels/Ke.tscn"
+
+[node name="Button2" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0, 0, 0, 0)
+layout_mode = 0
+offset_left = 164.0
+offset_top = 288.0
+offset_right = 172.0
+offset_bottom = 296.0
+scale = Vector2(9.04808, 8.46277)
+flat = true
+
+[node name="Button3" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0, 0, 0, 0)
+layout_mode = 0
+offset_left = 332.0
+offset_top = 266.0
+offset_right = 340.0
+offset_bottom = 274.0
+scale = Vector2(9.55344, 7.93057)
+flat = true
+
+[node name="Button4" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0, 0, 0, 0)
+layout_mode = 0
+offset_left = 400.0
+offset_top = 154.0
+offset_right = 408.0
+offset_bottom = 162.0
+scale = Vector2(-8.14778, 7.7982)
+flat = true
+script = ExtResource("1_2ym3t")
+scene = "res://Scenes/AreaSelector.tscn"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(575, 323)
+scale = Vector2(0.259561, 0.213622)
+texture = ExtResource("2_wg3tg")
+
+[node name="Sprite2D2" parent="." instance=ExtResource("3_72oml")]
+position = Vector2(230, 298)
+scale = Vector2(0.152346, 0.152346)
+
+[node name="Sprite2D3" parent="." instance=ExtResource("3_72oml")]
+position = Vector2(395, 274)
+scale = Vector2(0.152346, 0.152346)
+
+[node name="Sprite2D4" parent="." instance=ExtResource("3_72oml")]
+position = Vector2(582, 286)
+scale = Vector2(0.152346, 0.152346)
+
+[node name="Sprite2D5" parent="." instance=ExtResource("3_72oml")]
+position = Vector2(668, 418)
+scale = Vector2(0.152346, 0.152346)
+
+[node name="Sprite2D6" parent="." instance=ExtResource("3_72oml")]
+position = Vector2(774, 276)
+scale = Vector2(0.152346, 0.152346)
+
+[node name="Sprite2D7" parent="." instance=ExtResource("3_72oml")]
+position = Vector2(970, 257)
+scale = Vector2(0.152346, 0.152346)
+
+[node name="Sprite2D8" parent="." instance=ExtResource("3_72oml")]
+position = Vector2(1104, 277)
+scale = Vector2(0.152346, 0.152346)

@@ -1,0 +1,70 @@
+[gd_scene load_steps=9 format=3 uid="uid://xoxv5ivb7lvf"]
+
+[ext_resource type="Script" path="res://Scenes/WorldScripts/KeWorld.gd" id="1_jyevm"]
+[ext_resource type="PackedScene" uid="uid://cb10rklint0t2" path="res://Scenes/Background.tscn" id="2_qfmco"]
+[ext_resource type="Texture2D" uid="uid://dswapyery0s2o" path="res://Assets/Background/ADDIS ABABA BACKGROUND-05.png" id="3_pr1qx"]
+[ext_resource type="PackedScene" uid="uid://dgu4qqhcpgfqa" path="res://Scenes/Player.tscn" id="4_sykq1"]
+[ext_resource type="PackedScene" uid="uid://cgjvm8qlp8al7" path="res://Score.tscn" id="5_5c5ti"]
+[ext_resource type="PackedScene" uid="uid://reykovef8and" path="res://Scenes/heart.tscn" id="6_7hmw3"]
+[ext_resource type="PackedScene" uid="uid://pilievlkvvc8" path="res://Scenes/ScoreBox.tscn" id="7_3jo4w"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_n3qbx"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_jyevm")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(577, 323)
+
+[node name="Sprite2D" parent="." instance=ExtResource("2_qfmco")]
+position = Vector2(576, 322)
+scale = Vector2(0.266873, 0.21669)
+texture = ExtResource("3_pr1qx")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(593, 647)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_n3qbx")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(0, 291)
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource("WorldBoundaryShape2D_n3qbx")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(1152, 294)
+rotation = -1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+shape = SubResource("WorldBoundaryShape2D_n3qbx")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(570, 36)
+rotation = -3.14159
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+shape = SubResource("WorldBoundaryShape2D_n3qbx")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("4_sykq1")]
+position = Vector2(593, 581)
+scale = Vector2(0.247018, 0.247018)
+
+[node name="Control" parent="." instance=ExtResource("5_5c5ti")]
+offset_left = 120.0
+offset_top = 3.0
+offset_right = 120.0
+offset_bottom = 3.0
+
+[node name="Control2" parent="." instance=ExtResource("6_7hmw3")]
+offset_left = 937.0
+offset_top = -10.0
+offset_right = 977.0
+offset_bottom = 30.0
+scale = Vector2(0.53996, 0.53996)
+
+[node name="Sprite2D2" parent="." instance=ExtResource("7_3jo4w")]
+position = Vector2(175, 33)
+scale = Vector2(0.416528, 0.416528)

@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqmjjvj34aga1"]
+
+[ext_resource type="Script" path="res://Scripts/SceneSelector.gd" id="1_08g4u"]
+[ext_resource type="Texture2D" uid="uid://eownfxd24xkb" path="res://Assets/Background/LEVELSS.png" id="2_ofx57"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0, 0, 0, 0)
+layout_mode = 0
+offset_left = 68.0
+offset_top = 244.0
+offset_right = 76.0
+offset_bottom = 252.0
+scale = Vector2(18.6087, 11.1271)
+flat = true
+script = ExtResource("1_08g4u")
+scene = "res://Scenes/AdwaLevels.tscn"
+
+[node name="Button2" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0, 0, 0, 0)
+layout_mode = 0
+offset_left = 339.0
+offset_top = 372.0
+offset_right = 347.0
+offset_bottom = 380.0
+scale = Vector2(18.6087, 11.1271)
+flat = true
+script = ExtResource("1_08g4u")
+scene = "res://Scenes/AddisAbabaLevels.tscn"
+
+[node name="Button3" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0, 0, 0, 0)
+layout_mode = 0
+offset_left = 616.0
+offset_top = 197.0
+offset_right = 624.0
+offset_bottom = 205.0
+scale = Vector2(18.6087, 11.1271)
+flat = true
+script = ExtResource("1_08g4u")
+scene = "res://Scenes/GondarLevels.tscn"
+
+[node name="Button4" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0, 0, 0, 0)
+layout_mode = 0
+offset_left = 935.0
+offset_top = 266.0
+offset_right = 943.0
+offset_bottom = 274.0
+scale = Vector2(18.6087, 11.1271)
+flat = true
+script = ExtResource("1_08g4u")
+scene = "res://Scenes/HawassaLevels.tscn"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(575, 323)
+scale = Vector2(0.259561, 0.213622)
+texture = ExtResource("2_ofx57")

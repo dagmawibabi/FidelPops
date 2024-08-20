@@ -1,0 +1,96 @@
+[gd_scene load_steps=4 format=3 uid="uid://bki2pwiagv4vc"]
+
+[ext_resource type="Script" path="res://Scripts/SceneSelector.gd" id="1_4ewiw"]
+[ext_resource type="Texture2D" uid="uid://cny470wgqkgmx" path="res://Assets/Background/ADDISABABA.png" id="2_dajfl"]
+[ext_resource type="PackedScene" uid="uid://6urm4t3er4ah" path="res://Scenes/Lock.tscn" id="3_pevj6"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0, 0, 0, 0)
+layout_mode = 0
+offset_left = 40.0
+offset_top = 239.0
+offset_right = 48.0
+offset_bottom = 247.0
+scale = Vector2(9.11185, 7.3276)
+flat = true
+script = ExtResource("1_4ewiw")
+scene = "res://Scenes/Levels/Qe.tscn"
+
+[node name="Button2" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0, 0, 0, 0)
+layout_mode = 0
+offset_left = 164.0
+offset_top = 288.0
+offset_right = 172.0
+offset_bottom = 296.0
+scale = Vector2(9.04808, 8.46277)
+flat = true
+script = ExtResource("1_4ewiw")
+scene = "res://Scenes/Levels/Le.tscn"
+
+[node name="Button3" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0, 0, 0, 0)
+layout_mode = 0
+offset_left = 332.0
+offset_top = 266.0
+offset_right = 340.0
+offset_bottom = 274.0
+scale = Vector2(9.55344, 7.93057)
+flat = true
+script = ExtResource("1_4ewiw")
+scene = "res://Scenes/Levels/Ham.tscn"
+
+[node name="Button4" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0, 0, 0, 0)
+layout_mode = 0
+offset_left = 398.0
+offset_top = 143.0
+offset_right = 406.0
+offset_bottom = 151.0
+scale = Vector2(-7.89192, 7.47959)
+flat = true
+script = ExtResource("1_4ewiw")
+scene = "res://Scenes/AreaSelector.tscn"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(575, 323)
+scale = Vector2(0.259561, 0.213622)
+texture = ExtResource("2_dajfl")
+
+[node name="Sprite2D2" parent="." instance=ExtResource("3_pevj6")]
+position = Vector2(231, 291)
+scale = Vector2(0.197381, 0.197381)
+
+[node name="Sprite2D3" parent="." instance=ExtResource("3_pevj6")]
+position = Vector2(396, 264)
+scale = Vector2(0.197381, 0.197381)
+
+[node name="Sprite2D4" parent="." instance=ExtResource("3_pevj6")]
+position = Vector2(586, 281)
+scale = Vector2(0.197381, 0.197381)
+
+[node name="Sprite2D5" parent="." instance=ExtResource("3_pevj6")]
+position = Vector2(669, 418)
+scale = Vector2(0.197381, 0.197381)
+
+[node name="Sprite2D6" parent="." instance=ExtResource("3_pevj6")]
+position = Vector2(774, 275)
+scale = Vector2(0.197381, 0.197381)
+
+[node name="Sprite2D7" parent="." instance=ExtResource("3_pevj6")]
+position = Vector2(973, 257)
+scale = Vector2(0.197381, 0.197381)
+
+[node name="Sprite2D8" parent="." instance=ExtResource("3_pevj6")]
+position = Vector2(1106, 277)
+scale = Vector2(0.197381, 0.197381)

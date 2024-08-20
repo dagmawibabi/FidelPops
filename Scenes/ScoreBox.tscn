@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://pilievlkvvc8"]
+
+[ext_resource type="Texture2D" uid="uid://b4uh66hb1oebi" path="res://Assets/Score.png" id="1_36cpv"]
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(8, 44)
+texture = ExtResource("1_36cpv")

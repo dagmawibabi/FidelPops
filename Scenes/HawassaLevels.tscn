@@ -1,0 +1,100 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3e70mwpymefj"]
+
+[ext_resource type="Script" path="res://Scripts/SceneSelector.gd" id="1_60utu"]
+[ext_resource type="Texture2D" uid="uid://d2cor3qeb1ke8" path="res://Assets/Background/HAWASSA.png" id="2_iptyi"]
+[ext_resource type="PackedScene" uid="uid://6urm4t3er4ah" path="res://Scenes/Lock.tscn" id="3_ock06"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0, 0, 0, 0)
+layout_mode = 0
+offset_left = 19.0
+offset_top = 249.0
+offset_right = 27.0
+offset_bottom = 257.0
+scale = Vector2(9.11185, 7.3276)
+flat = true
+script = ExtResource("1_60utu")
+scene = "res://Scenes/Levels/Je.tscn"
+
+[node name="Button2" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0, 0, 0, 0)
+layout_mode = 0
+offset_left = 141.0
+offset_top = 299.0
+offset_right = 149.0
+offset_bottom = 307.0
+scale = Vector2(9.04808, 8.46277)
+flat = true
+script = ExtResource("1_60utu")
+scene = "res://Scenes/Levels/Le.tscn"
+
+[node name="Button3" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0, 0, 0, 0)
+layout_mode = 0
+offset_left = 308.0
+offset_top = 272.0
+offset_right = 316.0
+offset_bottom = 280.0
+scale = Vector2(9.55344, 7.93057)
+flat = true
+script = ExtResource("1_60utu")
+scene = "res://Scenes/Levels/Ham.tscn"
+
+[node name="Button4" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0, 0, 0, 0)
+layout_mode = 0
+offset_left = 407.0
+offset_top = 143.0
+offset_right = 415.0
+offset_bottom = 151.0
+scale = Vector2(-7.89192, 7.47959)
+flat = true
+script = ExtResource("1_60utu")
+scene = "res://Scenes/AreaSelector.tscn"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(575, 323)
+scale = Vector2(0.259561, 0.213622)
+texture = ExtResource("2_iptyi")
+
+[node name="Sprite2D2" parent="." instance=ExtResource("3_ock06")]
+position = Vector2(204, 309)
+scale = Vector2(0.149078, 0.149078)
+
+[node name="Sprite2D3" parent="." instance=ExtResource("3_ock06")]
+position = Vector2(374, 285)
+scale = Vector2(0.149078, 0.149078)
+
+[node name="Sprite2D4" parent="." instance=ExtResource("3_ock06")]
+position = Vector2(556, 291)
+scale = Vector2(0.149078, 0.149078)
+
+[node name="Sprite2D5" parent="." instance=ExtResource("3_ock06")]
+position = Vector2(643, 427)
+scale = Vector2(0.149078, 0.149078)
+
+[node name="Sprite2D6" parent="." instance=ExtResource("3_ock06")]
+position = Vector2(752, 288)
+scale = Vector2(0.149078, 0.149078)
+
+[node name="Sprite2D7" parent="." instance=ExtResource("3_ock06")]
+position = Vector2(944, 264)
+scale = Vector2(0.149078, 0.149078)
+
+[node name="Sprite2D8" parent="." instance=ExtResource("3_ock06")]
+position = Vector2(1073, 284)
+scale = Vector2(0.149078, 0.149078)
+
+[node name="Sprite2D9" parent="." instance=ExtResource("3_ock06")]
+position = Vector2(1074, 174)
+scale = Vector2(0.149078, 0.149078)

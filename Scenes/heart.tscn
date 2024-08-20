@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://reykovef8and"]
+
+[ext_resource type="Script" path="res://Heart.gd" id="1_a2x4p"]
+[ext_resource type="Texture2D" uid="uid://dpdvm100l55fd" path="res://Assets/Heart/heart.png" id="2_yip2u"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_a2x4p")
+
+[node name="Heart1" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.0387894, 0.0387894)
+texture = ExtResource("2_yip2u")
+
+[node name="Heart2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 1.0
+offset_right = 2576.0
+offset_bottom = 2501.0
+scale = Vector2(0.0384381, 0.0384381)
+texture = ExtResource("2_yip2u")
+
+[node name="Heart3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 1.0
+offset_right = 2650.0
+offset_bottom = 2501.0
+scale = Vector2(0.0386233, 0.0386233)
+texture = ExtResource("2_yip2u")

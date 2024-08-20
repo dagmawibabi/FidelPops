@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://3wqdb7d6887m"]
+
+[ext_resource type="Texture2D" uid="uid://gd3y02dxe3ak" path="res://Assets/Background/ABOUT.png" id="1_nbmlt"]
+[ext_resource type="Script" path="res://Scripts/SceneSelector.gd" id="2_3v8fa"]
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(574, 325)
+scale = Vector2(0.545315, 0.482833)
+texture = ExtResource("1_nbmlt")
+
+[node name="Button4" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0, 0, 0, 0)
+offset_left = -82.5211
+offset_top = 424.578
+offset_right = -74.5211
+offset_bottom = 432.578
+scale = Vector2(20.3446, 20.2924)
+flat = true
+script = ExtResource("2_3v8fa")
+scene = "res://Scenes/Homepage.tscn"

@@ -1,0 +1,87 @@
+[gd_scene load_steps=10 format=3 uid="uid://co0ang0hb3o6e"]
+
+[ext_resource type="PackedScene" uid="uid://dgu4qqhcpgfqa" path="res://Scenes/Player.tscn" id="1_2biod"]
+[ext_resource type="Script" path="res://Scenes/WorldScripts/HaWorld.gd" id="1_r3alx"]
+[ext_resource type="PackedScene" uid="uid://cb10rklint0t2" path="res://Scenes/Background.tscn" id="3_q276v"]
+[ext_resource type="PackedScene" uid="uid://cgjvm8qlp8al7" path="res://Score.tscn" id="4_ui5xn"]
+[ext_resource type="PackedScene" uid="uid://reykovef8and" path="res://Scenes/heart.tscn" id="5_qt3ld"]
+[ext_resource type="PackedScene" uid="uid://pilievlkvvc8" path="res://Scenes/ScoreBox.tscn" id="6_mx74c"]
+[ext_resource type="Texture2D" uid="uid://tvwlscdrxpuf" path="res://Assets/Pause.png" id="7_ifrby"]
+[ext_resource type="Script" path="res://Scripts/PauseScript.gd" id="8_x7qu0"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_n3qbx"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_r3alx")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(577, 323)
+
+[node name="Sprite2D" parent="." instance=ExtResource("3_q276v")]
+position = Vector2(576, 322)
+scale = Vector2(0.91411, 0.742221)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(593, 647)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_n3qbx")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(0, 291)
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource("WorldBoundaryShape2D_n3qbx")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(1152, 294)
+rotation = -1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+shape = SubResource("WorldBoundaryShape2D_n3qbx")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(571, 45)
+rotation = -3.14159
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+shape = SubResource("WorldBoundaryShape2D_n3qbx")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_2biod")]
+position = Vector2(593, 581)
+scale = Vector2(0.247018, 0.247018)
+
+[node name="Control" parent="." instance=ExtResource("4_ui5xn")]
+offset_left = 133.0
+offset_top = 11.0
+offset_right = 133.0
+offset_bottom = 11.0
+
+[node name="Control2" parent="." instance=ExtResource("5_qt3ld")]
+offset_left = 913.0
+offset_top = -4.0
+offset_right = 953.0
+offset_bottom = 36.0
+scale = Vector2(0.53996, 0.53996)
+
+[node name="Sprite2D2" parent="." instance=ExtResource("6_mx74c")]
+position = Vector2(187, 41)
+scale = Vector2(0.434431, 0.434431)
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(295, 22)
+scale = Vector2(0.127303, 0.127303)
+texture = ExtResource("7_ifrby")
+
+[node name="Button" type="Button" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0, 0, 0, 0)
+offset_left = 276.0
+offset_right = 284.0
+offset_bottom = 8.0
+scale = Vector2(5.19783, 5.36694)
+flat = true
+script = ExtResource("8_x7qu0")
